@@ -1,0 +1,24 @@
+:root {
+  --md-primary-fg-color: #0a2f55;
+  --md-primary-fg-color--light: #11406f;
+  --md-primary-fg-color--dark: #061a2f;
+  --md-accent-fg-color: #2aa9ff;
+}
+
+/* Slightly more “corporate doc” typography */
+.md-typeset {
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.md-header__title {
+  font-weight: 700;
+}
+
+/* Make the logo crisp and not oversized */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 1.4rem;
+  width: auto;
+}
+

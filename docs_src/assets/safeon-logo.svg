@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="700" viewBox="0 0 1600 700">
+<defs>
+  <mask id="cut">
+    <rect width="100%" height="100%" fill="white"/>
+    <path d="M210 120 C170 155 120 172 70 178 L70 360 C70 500 150 585 210 635 L210 120 Z" fill="black"/>
+  </mask>
+</defs>
+<g>
+  <path d="M210 90 C160 135 95 155 40 162 L40 360 C40 545 145 635 210 685 C275 635 380 545 380 360 L380 162 C325 155 260 135 210 90 Z" fill="white" mask="url(#cut)"/>
+  <path d="M210 120 C250 150 305 170 350 176 L350 360 C350 500 270 585 210 635 Z" fill="#e6e6e6"/>
+  <text x="470" y="470" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="260" font-weight="900" fill="white">Safeon</text>
+</g>
+</svg>
+
