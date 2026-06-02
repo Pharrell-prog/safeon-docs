@@ -1,47 +1,39 @@
 ## Safeon Docs (MkDocs)
 
-This folder is a ready-to-deploy documentation site built with **MkDocs + Material**.
+Engineering documentation site (MkDocs + Material).
 
-### What you do
-- **You will login** to GitHub + Cloudflare Pages + Porkbun (domain/DNS).
-- You will connect this repo to Cloudflare Pages and point `docs.<yourdomain>` to it.
-
-### 1) Run locally (optional)
-
-From PowerShell in this folder:
+### Run locally
 
 ```powershell
+cd "C:\Users\Pharrell\Documents\M7\safeon-docs"
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 mkdocs serve
 ```
 
-Then open the local URL shown (usually `http://127.0.0.1:8000/`).
+Open `http://127.0.0.1:8000/`.
 
-### 2) Deploy (Cloudflare Pages – recommended)
+### Deploy (GitHub Pages — use this, not Cloudflare)
 
-1. Create a new GitHub repo (example name: `safeon-docs`) and push this folder.
-2. In Cloudflare Pages:
-   - **Connect to Git** → select the repo
-   - **Framework preset**: None
-   - **Build command**: `mkdocs build`
-   - **Build output directory**: `site`
-3. After deploy, Cloudflare will give you a URL like:
-   - `<project>.pages.dev`
+Cloudflare’s “Create application” flow forces a Wrangler deploy command and often fails with token errors. **Use GitHub Pages instead.**
 
-### 3) Custom domain (Porkbun DNS)
+1. Push this repo to GitHub (`Pharrell-prog/safeon-docs`).
+2. On GitHub: **Settings → Pages → Build and deployment → Source** → choose **GitHub Actions**.
+3. Push to `main` (the workflow in `.github/workflows/pages.yml` builds and deploys automatically).
+4. Live URL: `https://pharrell-prog.github.io/safeon-docs/` (after the first Actions run finishes).
 
-In Porkbun DNS, add:
-- **Type**: CNAME  
-  **Host**: `docs`  
-  **Answer**: `<project>.pages.dev`
+### Custom domain (Porkbun)
 
-Then in Cloudflare Pages → Custom domains:
-- Add: `docs.<yourdomain>`
+1. GitHub repo → **Settings → Pages → Custom domain** → enter e.g. `docs.yourdomain.com`.
+2. Porkbun DNS:
+   - **Type**: CNAME  
+   - **Host**: `docs`  
+   - **Answer**: `pharrell-prog.github.io`
+3. Update `site_url` in `mkdocs.yml` to match your real domain.
 
-### Notes
-- Edit content in `docs/` (Markdown).
-- Images live in `docs/assets/`.
-- Your PDS page is at `docs/pds/safeon-oxman-sft-001.md`.
+### Content
 
+- Markdown: `docs/`
+- Images: `docs/assets/`
+- PDS: `docs/pds/safeon-oxman-sft-001.md`
