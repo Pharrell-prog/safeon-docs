@@ -19,9 +19,9 @@ The immediate engineering sprint focuses on developing a **20‑unit prototype r
 The platform bridges short‑range retail asset tagging with long‑range tracking, behaving simultaneously as an **asset tag** and an **infrastructure reader**.
 
 ### 2.1 High‑Level Flow
-![High-level workflow diagram](../assets/pds-high-level-flow.svg)
+![High-level workflow diagram](../assets/pds-high-level-flow.png)
 
-> Note: The pilot diagrams for “theft event visualization” and the “power state machine” will be added once the final images are exported to `docs_src/assets/`.
+![Theft event visualization](../assets/pds-high-level-flow-2.png)
 
 ### 2.2 Functional Narrative
 - **In‑store theft detection**: High‑value assets are fitted with Des’s designated sew‑in RFID tags. If an asset passes the exit threshold without point‑of‑sale clearance, a localized RFID portal scans the asset tag and updates the backend system to **Stolen** status.
@@ -62,7 +62,7 @@ The core PCB layout must include:
 To transition successfully to extended commercial lifespan requirements, the firmware must implement a strictly managed state machine.
 
 ### 4.1 Power State Machine
-*(Diagram pending – export to `docs_src/assets/state-machine.(png|svg)` and link here.)*
+![Device power state machine (FSM)](../assets/state-machine.png)
 
 ### 4.2 State Definitions
 **State 0 — Deep Sleep / Dormant (Shelf Life)**
