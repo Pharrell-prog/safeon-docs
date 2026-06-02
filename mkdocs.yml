@@ -1,0 +1,31 @@
+site_name: Safeon Engineering Docs
+site_description: Engineering documentation for Safeon pilots and products
+site_url: https://docs.example.com/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: light blue
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.tracking
+    - toc.follow
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - PDS:
+      - Safeon-Oxman-SFT-001: pds/safeon-oxman-sft-001.md
+
