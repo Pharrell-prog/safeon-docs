@@ -2,6 +2,8 @@ site_name: Safeon Engineering Docs
 site_description: Engineering documentation for Safeon pilots and products
 site_url: https://docs.example.com/
 
+docs_dir: docs_src
+
 theme:
   name: material
   palette:
