@@ -19,8 +19,11 @@ Open `http://127.0.0.1:8000/`.
 Cloudflare’s “Create application” flow forces a Wrangler deploy command and often fails with token errors. **Use GitHub Pages instead.**
 
 1. Push this repo to GitHub (`Pharrell-prog/safeon-docs`).
-2. On GitHub: **Settings → Pages → Build and deployment → Source** → choose **GitHub Actions**.
-3. Push to `main` (the workflow in `.github/workflows/pages.yml` builds and deploys automatically).
+2. On GitHub: **Settings → Pages → Build and deployment**
+   - **Source**: Deploy from a branch
+   - **Branch**: `gh-pages`
+   - **Folder**: `/ (root)`
+3. Push to `main` (the workflow in `.github/workflows/pages.yml` builds MkDocs and publishes to the `gh-pages` branch automatically).
 4. Live URL: `https://pharrell-prog.github.io/safeon-docs/` (after the first Actions run finishes).
 
 ### Custom domain (Porkbun)
